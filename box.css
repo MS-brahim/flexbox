@@ -2,3 +2,58 @@
     padding: 0;
     margin: 0;
 }
+#navbar {
+    background-color: gainsboro;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+
+}
+ #navbar ul li a {
+    color: green;
+    margin: 10px;
+    padding-left: 2%;
+    text-decoration: none;
+    
+}
+#navbar ul li img {
+    width: 40px;
+    height: auto;
+    padding-left: 30%;
+}
+@media print (min-width:700px){
+    #navbar{
+        background-color: gainsboro;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #navbar ul li a {
+        color: green;
+        margin: 10px;
+        padding-left: 2%;
+        text-decoration: none;
+        
+    }
+    #navbar ul li img {
+        width: 40px;
+        height: auto;
+        padding-left: 30%;
+}
+@media print (max-width:700px){
+    #navbar{
+        background-color: gainsboro;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #navbar ul li a {
+        color: green;
+        margin: 10px;
+        text-decoration: none;
+        
+    }
+    #navbar ul li img {
+        width: 40px;
+        height: auto;
+        padding-left: 2px;
+        padding-left: 30%;
+}
