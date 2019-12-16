@@ -5,10 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
         <title>ASSALKOM | Home</title>
-         <!-- Google Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
-        <link href="assets/css/all.css" rel="stylesheet"> <!--load all styles -->
+         
+         <link href="assets/css/all.css" rel="stylesheet"> <!--load all styles -->
 
         <style>
             body{
@@ -16,7 +14,8 @@
             }
 
             .navbar{
-                background: #415068;
+                background: #232A34;
+                height: 57px;
             }
 
             .navbar div{
@@ -33,7 +32,7 @@
                 text-align: center;
                 padding: 1em;
                 text-decoration: none;
-                background: #223047;
+                background: #232A34;
                 color: #fff;
             }
             .navbar .link:hover,
@@ -54,12 +53,18 @@
             }
 
             .navbar .toggle{
-                padding: 1em;
-                color: black;
+                padding-left:7%; 
+                color: white;
+                font-size: 10px;
+
+
             }
 
             @media (min-width: 768px) {
                 .navbar{
+                    display: flex;
+                }
+                .navbar div{
                     display: flex;
                 }
                 .navbar .left,
@@ -67,14 +72,37 @@
                     display: flex;
                     flex:1;
                 }
+                .navbar .link{
+                    width: auto;
+                }
+                .navbar .right{
+                    justify-content: flex-end;
+                    padding-right: 3%;
+                }
+                .navbar .toggle{
+                    display: none;
+                }
+            }
+
+            @media (max-width: 767px) {
+                .navbar.active .toggle {
+                    background: #223047;
+                    color: white;
+                }
+                .navbar .brand{
+                    text-align: left;
+                }
+                .navbar.active div{
+                    display: block;
+                }
             }
         </style>
     </head>
     <body>
             <div class="navbar">
 
-                <a href="" class="toggle" id="navHamburger"><i class="fas fa-bars"></i></a>
-                <a href="" class="brand">MyName</a>
+                <a href="#" class="toggle" id="navHamburger"><i class="fas fa-bars"></i></a>
+                <a href="" class="brand">Marchoc</a>
 
                 <div class="left">
                     <a href="" class="link">link1</a>
@@ -86,6 +114,12 @@
 
                 </div>
             </div>
+            <Script>
+                var navHamburger = document.querySelector('#navHamburger');
+                navHamburger.addEventListener( 'click', (e) => {
+                    navHamburger.parentElement.classList.toggle('active');
+                });
+            </Script>
             <script defer src="assets/js/all.js"></script> <!--load all styles -->
 
     </body>
