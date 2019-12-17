@@ -1,109 +1,225 @@
-/*global*/
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
-body{
-    background-color: #F2F2F2;
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0;
-}
-/*global*/
+            body{
+                margin: 0px;
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+            .container-lg{
+                width: 100%;
+                margin: auto;
+                margin-top: 57px;
+            }
+            .container{
 
-/* top navbar*/
-.fix{
-        /* z-index: 2; */
-        z-index: 12;
-        /* position: fixed; */
-        width: 100%;
-        position: fixed;
-        
-}
+                    width: 900px;
+                    margin: auto;
+            }
+            .navbar{
+                position: fixed;
+                width: 100%;
+                background: #232A34;
+                height: 57px;
+                z-index: 4;
+                
+            }
+            hr{
+                background-color: rgb(187, 187, 187);
+                margin-top: -17px;
+            }
+            .navbar div{
+                display: none;
+            }
 
-.navbar{
-    padding: 12px 90px ;
-   
-}
-.navbar-brand {
-    position: relative;
-    
-}
-.navbar-brand span{
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(241, 177, 62);
-}
+            .navbar .toggle,
+            .navbar .brand{
+                display: inline-block;
+            }
 
-.navbar-brand svg{
-    position: absolute;
-    top: 3px;
-    color: rgb(241, 177, 62);
-    margin-left: 5px;
-    
-}
-.bg-light {
-    background-color: #fff !important;
-    z-index: 13;
-}
-/* top navbar*/
-.navbar1{
-    width: 100%;
-    height: 60px;
-    position: relative;
-    background-color: #e09f00;
-}
-.navbar1 .nav{
-    display: flex;
-    position: absolute;
-    top: 20px;
-    right: 9%;
+            .navbar .link{
+                display: block;
+                text-align: center;
+                padding: 1em;
+                text-decoration: none;
+                background: #232A34;
+                color: #fff;
+                margin-left: 3px;
+                z-index: 2;
+            }
+            .navbar .link:hover,
+            .navbar .link:active {
+                color: #223047;
+                background: white;
+                border: 1px solid #06B995;
+            }
 
-}
-.navbar1 .nav li{
-    margin-right: 27px;
-    font-size: 21px;
-    font-weight: bold;
-}
-.navbar1 .nav li a{
-    color: #fff !important;
-}
+            .navbar .brand{
+                width:10em;
+                text-align: center;
+                padding: 0.8em;
+                font-weight: bold;
+                color: #06B995;
+                font-size: 20px;
+            }
 
-.carousel-item{
-    margin-top: 20px;
-}
+            .navbar a{
+                text-decoration: none;
+            }
 
-/* card */
-.card-deck{
-    margin: auto;
-    margin-top: 10px;
-}
+            .navbar .toggle{
+                padding-left:7%; 
+                color: white;
+                font-size: 30px;
+                margin-top: 12px;
+            }
+            .product{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 5%;
+                }
+            .card{
+                    width: 21%;
+                    padding: 20px 14px;
+                    margin-bottom: 10px;
+                    border: 1px solid #F2F2F2;    
+                    text-align: left;
+                    margin-left: 10px;
+                }
+                .card img{
+                width: 90%;
+            }
 
-/* card */
+            .footer{
+                position: relative;
+                width: 100%;
+                height: 70px;
+                background-color: #000;
+                
+            }
 
-/*model */
-.model h2{
-    font-size: 45px;
-    font-weight: bold;
-    margin-top: 40px;
 
-}
-/*model */
-@media (min-width: 1200px){
 
-}
-@media (min-width: 992px){
+            .f1{
+                position: absolute;
+                top: 12px;
+                left: 46%;
+            }
 
-}
-@media (max-width: 576px){
-    .carousel-item{
-        margin-top: 205px;
-    }
-    .navbar1 .nav li{
-    font-size: 16px;
-    }
-}
+            .f1 p{
+                margin-top: 19px;
+                color: #aaaaaa;
+                margin-left: 16px;
+                font-size: 11px;
+            }
+          
+
+            @media (min-width: 768px) {
+                .navbar{
+                    display: flex;
+                }
+                .navbar div{
+                    display: flex;
+                }
+                .navbar .left,
+                .navbar .right{
+                    display: flex;
+                    flex:1;
+                }
+                .navbar .link{
+                    width: auto;
+                }
+                .navbar .right{
+                    justify-content: flex-end;
+                    padding-right: 3%;
+                }
+                .navbar .right a{
+                    border: 1px solid #06B995;
+                    border-radius: 1px;
+                    color: #fff;
+                    background-color: #06B995;
+                }
+                .navbar .toggle{
+                    display: none;
+                }
+            }
+
+            .card-img-top{
+                width: 70%;
+            }
+
+            @media (max-width: 767px) and (min-width: 500px){
+                .navbar.active .toggle {
+                    background: #223047;
+                    color: white;
+                }
+                .navbar .brand{
+                    text-align: left;
+                }
+                .navbar.active div{
+                    display: block;
+                }
+                .product{
+                    display: flex;
+                    
+                   
+                }
+                .card{
+                     width: 39%;
+                }
+                .footer{
+                    flex-direction: column;
+                }
+            }
+            @media (max-width: 1090px) and (min-width: 768px) {
+                .card{
+                    width: 27%;
+                    margin: auto;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                }
+                
+            }
+            @media (max-width: 499px) {
+                .container-lg{
+                    height: 140px;
+                }
+                .navbar.active .toggle {
+                    background: #223047;
+                    color: white;
+                }
+                .navbar .brand{
+                    text-align: left;
+                }
+                .navbar.active div{
+                    display: block;
+                }
+                .product{
+                    display: flex;
+                    
+                }
+                .card{
+                    width: 40%;
+                    margin: auto;
+                    margin-bottom: 10px;
+                    }
+                    .footer{
+                    
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .footer {
+                    flex-direction: column;}
+                
+            }
+            @media (max-width: 365px) {
+                center h2{
+                    font-size: 15px;
+                        }
+                .card{
+                    width: 58%;
+                   
+                    margin: auto;
+                    }
+                
+
+                }
