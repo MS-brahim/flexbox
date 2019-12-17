@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <title>SOOK.com | Home</title>
+
+         
+         <link href="assets/css/all.css" rel="stylesheet"> <!--load all styles -->
+         <link href="box.css" rel="stylesheet"> <!--load all styles -->
+
+        <style>
+
+            body{
+                margin: 0px;
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+            
+            .container{
+
+                    width: 900px;
+                    margin: auto;
+            }
+            .navbar{
+                position: fixed;
+                width: 100%;
+                background: #232A34;
+                height: 57px;
+                z-index: 4;
+                
+            }
+            hr{
+                background-color: rgb(187, 187, 187);
+                margin-top: -17px;
+            }
+            .navbar div{
+                display: none;
+            }
+
+            .navbar .toggle,
+            .navbar .brand{
+                display: inline-block;
+            }
+
+            .navbar .link{
+                display: block;
+                text-align: center;
+                padding: 1em;
+                text-decoration: none;
+                background: #232A34;
+                color: #fff;
+                margin-left: 3px;
+                z-index: 2;
+            }
+            .navbar .link:hover,
+            .navbar .link:active {
+                color: #223047;
+                background: white;
+                border: 1px solid #06B995;
+            }
+
+            .navbar .brand{
+                width:10em;
+                text-align: center;
+                padding: 0.8em;
+                font-weight: bold;
+                color: #06B995;
+                font-size: 20px;
+            }
+
+            .navbar a{
+                text-decoration: none;
+            }
+
+            .navbar .toggle{
+                padding-left:7%; 
+                color: white;
+                font-size: 30px;
+                margin-top: 12px;
+            }
+           
+            .footer{
+                position: relative;
+                width: 100%;
+                height: 70px;
+                background-color: #000;
+                
+            }
+
+
+
+            .f1{
+                position: absolute;
+                top: 12px;
+                left: 48%;
+            }
+
+            .f1 p{
+                margin-top: 19px;
+                color: #aaaaaa;
+                margin-left: 16px;
+                font-size: 11px;
+            }
+          
+
+            @media (min-width: 768px) {
+                .navbar{
+                    display: flex;
+                }
+                .navbar div{
+                    display: flex;
+                }
+                .navbar .left,
+                .navbar .right{
+                    display: flex;
+                    flex:1;
+                }
+                .navbar .link{
+                    width: auto;
+                }
+                .navbar .right{
+                    justify-content: flex-end;
+                    padding-right: 3%;
+                }
+                .navbar .right a{
+                    border: 1px solid #06B995;
+                    border-radius: 1px;
+                    color: #fff;
+                    background-color: #06B995;
+                }
+                .navbar .toggle{
+                    display: none;
+                }
+            }
+
+
+            @media (max-width: 767px) and (min-width: 500px){
+                .navbar.active .toggle {
+                    background: #223047;
+                    color: white;
+                }
+                .navbar .brand{
+                    text-align: left;
+                }
+                .navbar.active div{
+                    display: block;
+                }
+            
+                .footer{
+                    flex-direction: column;
+                }
+            }
+         
+            @media (max-width: 499px) {
+                .navbar.active .toggle {
+                    background: #223047;
+                    color: white;
+                }
+                .navbar .brand{
+                    text-align: left;
+                }
+                .navbar.active div{
+                    display: block;
+                }
+         
+                .footer {
+                    flex-direction: column; !important}
+                
+            }
+        
+        </style>
+    </head>
+    <body>
+        <!--navbar-->
+            <div class="navbar">
+
+                <a href="#" class="toggle" id="navHamburger"><i class="fas fa-bars"></i></a>
+                <a href="" class="brand"><i class="fas fa-shopping-cart"></i>   SOOK.com</a>
+
+                <div class="left">
+                    <a href="" class="link">Home</a>
+                    <a href="" class="link">Products</a>
+
+                </div>
+                <div class="right">
+                    <a href="" class="link">Gallery</a>
+                </div>
+            </div>
+           
+        <!--navbar-->
+        <!-- start gallery -->
+        <div class="gal">
+			       <h3>Gallery</h3>
+			      <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+			<div id="conteneur">
+			    <div ><img src="img/1.jpg"></div>
+			    <div ><img src="img/2.jpg"></div>
+			    <div ><img src="img/3.jpg"></div>
+			    <div ><img src="img/4.jpg"></div>
+			    <div ><img src="img/5.jpg"></div>
+			    <div ><img src="img/6.jpg"></div>
+			    <div ><img src="img/7.jpg"></div>
+			    <div ><img src="img/8.jpg"></div>
+			    <div ><img src="img/9.jpg"></div>
+			    <div ><img src="img/10.jpg"></div>
+			    <div ><img src="img/11.jpg"></div>
+			    <div ><img src="img/12.jpg"></div>
+			</div>
+            </div>
+        <!-- end gallery -->
+        <!-- content-->
+
+        <footer class="footer">
+            <div class="f1">
+                <p>&copy 2016 - 2019 SOOk.com</p>
+            </div>
+         
+        </footer>
+
+
+
+            <Script>
+                var navHamburger = document.querySelector('#navHamburger');
+                navHamburger.addEventListener( 'click', (e) => {
+                    navHamburger.parentElement.classList.toggle('active');
+                });
+            </Script>
+            <script defer src="assets/js/all.js"></script> <!--load all styles -->
+
+    </body>
+</html>
